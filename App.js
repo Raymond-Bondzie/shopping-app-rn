@@ -1,12 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View , SafeAreaView} from 'react-native';
+import Shopping from './components/Shopping';
+import AddCart from './components/AddCart';
+import Payment from './components/Payment';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      {/* <Payment/> */}
+      {/* <AddCart/> */}
+      <Shopping/>
+      {/* <StatusBar style="auto" /> */}
+    </SafeAreaView>
   );
 }
 
@@ -14,7 +19,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+   // paddingHorizontal: 20,
+   
   },
 });
