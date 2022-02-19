@@ -1,8 +1,12 @@
 import { StyleSheet , View, Text, TouchableOpacity, Image} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 
 
 
 const AddCart= () => {
+  const  { navigate, goBack }  = useNavigation();
+
     return(
         <View style={styles.container}>
             <View style={styles.textcontainer}>
@@ -20,7 +24,9 @@ const AddCart= () => {
                 <Image source={require("../assets/1.png")} style={{width: 300 , height: "100%"}}/>
             </View>
             <View style={styles.buttonContainer}>
-                <TouchableOpacity style={{backgroundColor: 'blue', padding: 15, borderRadius: 30, width: 160}}>
+                <TouchableOpacity
+                 onPress={() => navigate("Payment")}
+                 style={{backgroundColor: 'blue', padding: 15, borderRadius: 30, width: 160}}>
                     <Text style={{color: 'white', textAlign: 'center'}}>Next</Text>
                 </TouchableOpacity>
             </View>
